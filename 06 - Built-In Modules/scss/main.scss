@@ -1,0 +1,12 @@
+$warnadasar : salmon;
+
+h1{
+    color: fade-out($color: $warnadasar, $amount: 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+// built-in module :color 
+
+// lebih lengkapnya ada di web https://sass-lang.com/documentation/modules

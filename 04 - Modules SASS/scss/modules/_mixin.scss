@@ -1,0 +1,20 @@
+//  kenapa filenya ada _ didepannya 
+// karna file ini ga dikompilasi dan bukan file utama di scss
+// file modular wajib ada _didepannamanya.scss
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+    }
+}
+
+@mixin flex-req($direction : row, $jarak : center){
+    display: flex;
+    justify-content: $jarak; 
+    align-items: center;
+    flex-direction: $direction; //harusnya paham klo udah belajar dasar bahasa pemograman
+ }
+
+

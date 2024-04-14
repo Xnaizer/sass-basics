@@ -1,0 +1,27 @@
+// @import 'modules/mixin';
+// // hati hati saat mengguanakan import pada saat ini karna element import ini sudah ada di css standar jdi harus hati"
+// // dan import ini sudah tidak disaranakan lagi untuk digunakan
+// @import 'modules/header';
+// @import 'modules/container';
+// @import 'modules/footer';
+
+
+// biasa kan untuk mnegimport sesuai urutan teratas ke bawah, karna yang akan dicompile duluan adalah line pertama hingga line terakhir
+
+// @import 'modules/mixin','modules/eader','modules/container','modules/footer';
+
+
+@use 'modules/header';
+@use 'modules/container';
+@use 'modules/footer';
+
+//disini ga ada tuh @use 'modules/mixin'; lalu dimana mixinnya ? mixinnya di taruh disetiap file yang menggunakan function mixin, seperti masukin line baru du container,footer,dan header karna mereka menggunakan mixin.
+
+// lalu gimana cara menjalankan use ini ? 
+// 1. buka terminal 
+// 2. ketik " sass scss/main.scss css/main.css "
+// ubah sass scss ini menjadi css. mengapa harus di ketik bg engga di jalankan? karna beda versi.
+
+// dan jangan lupa di code setiap file yang menggunakan fucntion mixin pada code tambahkan " mixin.namamixin/func"
+// mixin bisa di as menjadi variable yang bebas
+

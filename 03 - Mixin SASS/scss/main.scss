@@ -1,0 +1,82 @@
+
+
+// // di css biasa seperti ini
+// .header ul, .footer ul{
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// .header ul li, .footer ul li{
+//     display: inline-block;
+// }
+
+
+
+//simple mixin
+// @mixin namavar() {}, hanya akan di write di css jika sudah memanggil si mixin ini
+// sama halnya seperti funtion yang akan berjalan ketika dipanggil
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+    }
+}
+
+// cara makenya gimana bg
+
+.header ul{
+    @include inline-list();
+
+    li{
+        background-color: aqua;
+        padding: 0.7rem;
+        a{
+            color: brown;
+        }
+    }
+}
+
+.footer ul {
+    @include inline-list();
+    li{
+        padding: 0.4rem;
+        background-color: coral;
+        a{
+            color: aqua;
+        }
+    }
+}
+
+
+// argument pada mixin
+@mixin flex-req($direction : row, $jarak : center){
+   display: flex;
+   justify-content: $jarak; 
+   align-items: center;
+   flex-direction: $direction; //harusnya paham klo udah belajar dasar bahasa pemograman
+}
+
+.container{
+    @include flex-req(row-reverse,space-between);// mixin ini harus ada (isi) karna mixin tidak akan work saat terdapat error
+
+    //  tapi jika pada mixin kalian buat ($direction : row) maka default code nya akan menjadi row
+    width: 600px;
+    height: 400px;
+    background-color: blueviolet;
+
+    .box{
+        width: 60px;
+        height: 60px;
+        background-color: beige;
+        text-align: center;
+        line-height: 60px;
+    }
+}
+
+// idenya adalah kita ingin box berada pada tengah container dimana
+// ini akan menggunakan 4 line of code of flex. nah disini untuk mempersingkat waktu
+// kita akan membuat mixin/ function code yang sesuai untuk permsalahan ini
+

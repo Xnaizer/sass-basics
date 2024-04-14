@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    apa itu SASS?
+
+    SASS itu adalah CSS Pre processor
+    menghubungkan file css tapi ga diedit
+    lalu kita akan membuat file yang nanti di compile menjadi file css
+    file yang kita edit ini adalah SASS
+    (akan dicompile sebelum diproses oleh html)
+
+    kenapa make preprocessor ?
+    membantu dan mempermudah pekerjaan editor
+    simplenya seperti memanggil code global kedalam fungsi lokal
+
+    ex : 
+
+    $myFont : Helvetica, sans-serif
+    $primary-color : #fff
+
+    nah ini global code yang dapat dipanggil seperti fungsi
+
+    nav
+        font-family : $myFont
+        ul
+            margin: 0
+            padding: 0
+
+
+    nanti nav akan menggunakan font yang sudah dideklerasi pada global code
+    kok ga ada {} bang? nah ini yang di sebut syntax SASS
+
+    setelah di compile hasilnya akan menjadi seperti css biasanya
+
+    nav{
+        font-family: Helvetica, sans-serif;
+    }
+
+    nav ul{
+        margin: 0
+        padding: 0
+    }
+
+
+    kenapa preprocessor di ciptakan? karena CSS dulu memiliki kekurangan
+    afa tu bg?
+
+    - tidak ada variable
+    - tidak ada function
+    - tidak ada modularisasi ( gabisa misah" code)
+    - tidak bisa logika pemograman aljabar if dkk
+    - banyak duplikasi code (mager gaisss)
+
+
+    solusi dari pre processor
+    .variable dapat dipanggil
+    .mixin membuat serangkaian file seperti function
+    .import & uses memisahkan beberapa section code
+    .operator & built-in function ( hover pada versi tahum ini contohnya)
+    .nested css ya tahu donk inimah
+
+
+    preprocessor yang populer 
+    SASS, STYLUS, POSTCSS DLL
+    https://sass-lang.com/
+
+
+    SASS = Syntactically awesome style sheet
+
+    alasan menggunakan sass
+    - mempermudah penulisan
+    - mempermudah pengelolaan
+    - memiliki fungsi built-in
+    - kita dapat membuat fungsi sendiri
+    - kita dapat memodifikasi framework css
+        ex bootsrap
+    - banyaka perusahaan yang pake
+
+    SASS vs SCSS
+
+    SASS itu sintax yang kea contoh diatas
+    klo SCSS itu syntaxnya hampir mirip css biasa
+
+    kedua ini sama, nanti akan di compile menjadi file css juga. hanya saja ini mempermudah anda dalam penulisan
+
+    nanti saat membuat file scss harus command line juga 
+
+    sass source/stylesheets/namafile.css build/stylesheets/namafile.css
+
+    kita akan menggunakan vscode extension
+
+ -->
+
+<header>
+    <h1>hello!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et commodi voluptate minus magnam, quia distinctio quos explicabo impedit aliquam voluptas quae! Eligendi enim repudiandae quo officia harum ab quod!</p>
+</header>
+    
+</body>
+</html>

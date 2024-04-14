@@ -1,0 +1,14 @@
+@use 'mixin';
+
+.footer ul {
+    @include mixin.inline-list();
+    li{
+        padding: 0.4rem;
+        background-color: coral;
+        a{
+            color: aqua;
+        }
+    }
+}
+
+// kita dapat meng import ini ke main.scss

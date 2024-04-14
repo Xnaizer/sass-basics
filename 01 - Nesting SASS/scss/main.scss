@@ -1,0 +1,42 @@
+// .main{
+    
+
+//     .main-header{
+//         font-size: 2em;
+//     }
+
+//     .main-paragraph{
+//         font-size: 1.4em;
+//     }
+// }
+
+// // klo di css
+// // .main h1, .main p, footer h1, footer p {}
+
+// .main, footer{
+//     h1,p{
+//         letter-spacing: 1px;
+//     }
+// }
+
+// //  &
+// // parent selector
+// // jika ingin memanggil container pada main 1 maka ga bisa jika tidak ada tanda &
+
+// 
+
+
+.main{
+    &-header{ // & = main
+        font-size: 2rem;
+    }
+}
+// yang akan ditampilkan di css adalah .main-header{
+
+    // klo mau .main .main-header maka
+
+    .main{
+        & &-paragraph{ // & = main
+            font-size: 2rem;
+        }
+    }

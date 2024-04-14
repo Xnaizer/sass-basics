@@ -1,0 +1,76 @@
+// /// css variable 
+// /// :root = semua element pada html akan punya akses ke variable ini
+// /// 
+// /// 
+
+// // --namavar : isi dari element css
+// :root{
+//     --primary-color : red;
+//     --secondary-color : blue;
+//     --text-color : black   ;
+// }
+
+// // cara pakainya gimana
+
+// body{
+//     background-color: var(--primary-color);
+// }
+
+// h1{
+//     color: var(--secondary-color);
+// }
+
+// //  ini adalah teknologi terbaru pada masanya 21
+
+// kita akan menggunakan variable SASS
+
+$warna-pertama  : red;
+$warna-kedua : blue;
+$warna-text  : green;
+
+body{
+    background-color: $warna-pertama;
+}
+
+h1{
+    color: $warna-kedua;
+}
+
+//semisal gini
+
+// body {
+    
+//     $warna-pertama  : red;
+// }
+
+// $warna-pertama didalam body hanya dapat diakses sesama dalam variable body saja
+// kinerja ini sama seperti local code yang tidak dapat digunakan oleh local code lain atau pun global code.
+
+
+// lalu bisa ga dibikin jdi global bg ? bisa 
+
+//semisal gini
+
+// body {
+    
+//     $warna-pertama  : red !global; //tambahin aja  !global
+// }
+
+
+// map
+
+// $alert-danger  : red;
+// $alert-success : green;
+// $alert-warning : orange;
+
+//dari pada bikin begini mending
+
+$alert: (
+    'danger':red,
+    'success':green,
+    'warning':orange,
+);
+
+h1 {
+    color: map-get($alert, 'success' )
+}

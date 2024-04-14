@@ -1,0 +1,18 @@
+@use 'mixin' as fun;
+
+.container{
+    @include fun.flex-req(row-reverse,space-between);// mixin ini harus ada (isi) karna mixin tidak akan work saat terdapat error
+
+    //  tapi jika pada mixin kalian buat ($direction : row) maka default code nya akan menjadi row
+    width: 600px;
+    height: 400px;
+    background-color: blueviolet;
+
+    .box{
+        width: 60px;
+        height: 60px;
+        background-color: beige;
+        text-align: center;
+        line-height: 60px;
+    }
+}
